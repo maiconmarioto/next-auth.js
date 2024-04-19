@@ -22,10 +22,16 @@ export default function Home() {
           🔐 Auth
         </h1>
         <p className='text-white text-lg'>A simple authentication service</p>
-        <div>
-          <LoginButton>
+        <div className='flex flex-col  '>
+          <LoginButton mode='redirect' asChild>
             <Button variant='secondary' size='lg'>
-              Sign in
+              Sign in (redirect)
+            </Button>
+          </LoginButton>
+          <span>&nbsp;</span>
+          <LoginButton mode='modal' asChild>
+            <Button variant='secondary' size='lg'>
+              Sign in (modal)
             </Button>
           </LoginButton>
         </div>
